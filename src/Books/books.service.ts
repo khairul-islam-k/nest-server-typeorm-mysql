@@ -32,6 +32,6 @@ export class BooksService {
   }
 
   async permanentDelete(id: string) {
-    return await this.bookRepository.delete({id: +id});
+    return await this.bookRepository.delete(+id);
   }
 }

@@ -65,3 +65,21 @@ import { ConfigModule } from '@nestjs/config';
 export class AppModule {}
 ```
 ---
+
+## passport 
+
+```bash
+$ npm install --save @nestjs/passport passport passport-local
+```
+```bash
+$ npm install --save-dev @types/passport-local
+```
+---
+
+## JWT TOKEN
+```bash
+$ npm install --save @nestjs/jwt passport-jwt
+```
+```bash
+$ npm install --save-dev @types/passport-jwt
+```
