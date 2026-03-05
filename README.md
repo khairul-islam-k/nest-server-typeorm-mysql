@@ -1,6 +1,13 @@
-## set up
+## Project setup
 
 ```bash
+#project set up
+$ nest new project
+
+# we go to the right folder
+$ cd project
+
+# install all dependencies
 $ npm install
 ```
 
@@ -30,3 +37,31 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## typeorm + MySQL setup
+
+```bash
+## install typeorm
+$ npm install --save @nestjs/typeorm typeorm mysql2
+```
+---
+## .ENV file access
+
+```bash
+$ npm i --save @nestjs/config
+```
+## Add something - app.module.ts
+
+```bash
+import { Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
+
+@Module({
+  imports: [
+    ConfigModule.forRoot({
+  isGlobal: true,
+    });
+  ],
+})
+export class AppModule {}
+```
+---
