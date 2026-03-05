@@ -30,4 +30,8 @@ export class BooksService {
     console.log(+id);
     return await this.bookRepository.softDelete({id: +id});
   }
+
+  async permanentDelete(id: string) {
+    return await this.bookRepository.delete({id: +id});
+  }
 }

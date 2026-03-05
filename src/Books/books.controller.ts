@@ -20,6 +20,11 @@ export class BooksController {
     return this.booksService.deleteBook(id);
   }
 
+  @Delete('permanentDelete/:id')
+  permanentDelete(@Param('id') id: string) {
+    return this.booksService.permanentDelete(id);
+  }
+
   @Post('addBook')
   addBook(@Body() body: any): object {
     return this.booksService.addBook(body);
